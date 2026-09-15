@@ -13,7 +13,7 @@ const LocationsAPI = require("./datasources/LocationsApi");
 
 async function startApolloServer() {
   const server = new ApolloServer({
-    schema: buildSubgraphSchema({ typeDefs, resolvers }),
+    schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
   });
 
   const port = 4001;
